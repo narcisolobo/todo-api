@@ -12,12 +12,9 @@ dotenv.config();
  * function in the middleware chain.
  * @param {Express.Request} req - Express request object.
  * @param {Express.Response} res - Express response object.
- * @param {NextFunction} next - Next function callback. Calls the next
- * middleware function in the chain. In this case, control is passed
- * to the custom error handler middleware.
  * @returns {void}
  */
-const errorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res) => {
   const name = err.name || 'ServerError';
   const status = err.statusCode || 500;
   const message = err.message || 'Something went wrong';
