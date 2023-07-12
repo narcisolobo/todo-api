@@ -2,10 +2,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /**
- * @typedef {import('express').NextFunction} NextFunction
- */
-
-/**
  * This is an error handling middleware function that formats and
  * sends error responses to clients.
  * @param {Error} err - The error object that was thrown to the next()
